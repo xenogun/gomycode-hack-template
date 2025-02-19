@@ -1,3 +1,3 @@
 export default function AuthLayout() {
-  return <div>AuthLayout</div>;
+  return <div><Outlet/></div>;
 }

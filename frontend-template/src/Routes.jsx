@@ -16,8 +16,8 @@ export default function MyRoutes() {
         element={user ? <Navigate to={"/protected-route"} /> : <AuthLayout />}
       >
         <Route index element={<Navigate to={"/auth/login"} />} />
-        <Route index Component={Login} />
-        <Route index Component={Register} />
+        <Route path='login' Component={Login} />
+        <Route path='register' Component={Register} />
       </Route>
       <Route
         path="/protected-route"
