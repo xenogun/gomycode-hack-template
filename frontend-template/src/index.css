@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
 .loader {
   border: 3px solid #fff;
   border-radius: 50%;
