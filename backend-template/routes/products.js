@@ -11,6 +11,7 @@ import {
     validateProductExists,
     validateSearchAndSortParams,
 } from "../middlewares/product.js";
+import { productValidation } from "../validation/productValidation.js";
 const productRouter = Router();
 
 productRouter.get("/", getProducts);
