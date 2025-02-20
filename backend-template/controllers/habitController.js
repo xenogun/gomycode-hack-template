@@ -1,4 +1,4 @@
-const Habit = require("../models/habit");
+import Habit from "../models/habit.js";
 
 // Function to generate recommendations based on responses
 function generateRecommendations(responses) {
@@ -48,7 +48,7 @@ function generateRecommendations(responses) {
 }
 
 // Save user responses and generate recommendations
-exports.submitHabitForm = async (req, res) => {
+export const submitHabitForm = async (req, res) => {
     try {
         const {
             sleepHours,
@@ -97,4 +97,13 @@ exports.submitHabitForm = async (req, res) => {
 };
 
 // Get all habits (for testing purposes)
+
+export const getAllHabits = async (req, res) => {
+    try {
+        const habits = await Habit.find();
+        res.status(200).json({ data: habits });
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
 

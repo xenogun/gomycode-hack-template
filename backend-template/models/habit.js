@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import { Schema, model } from "mongoose";
 
-const habitSchema = new mongoose.Schema({
+const habitSchema = new Schema({
     sleepHours: { type: String, required: true },
     sleepQuality: { type: String, required: true },
     screenTime: { type: String, required: true },
@@ -12,4 +12,4 @@ const habitSchema = new mongoose.Schema({
     recommendations: { type: [String], default: [] },
 });
 
-module.exports = mongoose.model("Habit", habitSchema);
+export default model("Habit", habitSchema);
