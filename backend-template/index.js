@@ -46,4 +46,4 @@ process.on("SIGINT", async () => {
     logger.info("Shutting down server...");
     await dbConnection.close();
     process.exit(0);
-});
+  });

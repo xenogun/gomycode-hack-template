@@ -97,11 +97,4 @@ exports.submitHabitForm = async (req, res) => {
 };
 
 // Get all habits (for testing purposes)
-exports.getAllHabits = async (req, res) => {
-    try {
-        const habits = await Habit.find();
-        res.status(200).json({ data: habits });
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-};
+
